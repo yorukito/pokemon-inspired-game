@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx1lmb63aiov0"]
+
+[ext_resource type="Texture2D" uid="uid://daf5t1g81srk6" path="res://Sprites/ground.png" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://cr6fwuofqigs3" path="res://Scenes/player.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://ckrfihb8mr1o" path="res://Scenes/grass.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://m4dhpb4isoul" path="res://Scenes/treiner.tscn" id="4_jjvhh"]
+
+[node name="Main" type="Node2D"]
+position = Vector2(106, 160)
+
+[node name="Player" parent="." instance=ExtResource("2_8gbba")]
+z_index = 1
+position = Vector2(-5, -93)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(273, 181)
+scale = Vector2(11.8594, 7.25)
+texture = ExtResource("1_bo1nx")
+
+[node name="Grass" parent="." instance=ExtResource("3_8gbba")]
+position = Vector2(26, 3)
+
+[node name="Treiner" parent="." instance=ExtResource("4_jjvhh")]
+position = Vector2(204, -61)
