@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c73mcnl35u2om"]
+
+[ext_resource type="Script" uid="uid://wj2qprtlgl2t" path="res://Scripts/treiner_pokemon.gd" id="1_2nue0"]
+[ext_resource type="Texture2D" uid="uid://bn5h0b8dyi6lu" path="res://Sprites/poekemon_tree.png" id="1_l3x3l"]
+
+[node name="treiner_pokemon" type="Node2D"]
+script = ExtResource("1_2nue0")
+enemy_current_life = 200
+enemy_life = 200
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_l3x3l")

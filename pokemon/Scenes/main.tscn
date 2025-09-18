@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=3 uid="uid://bx1lmb63aiov0"]
+
+[ext_resource type="Texture2D" uid="uid://svaki2mb6420" path="res://Sprites/area.png" id="1_jjvhh"]
+[ext_resource type="Texture2D" uid="uid://w0goci2o34x6" path="res://Sprites/back_area.png" id="1_kry3j"]
+[ext_resource type="PackedScene" uid="uid://cr6fwuofqigs3" path="res://Scenes/player.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://ckrfihb8mr1o" path="res://Scenes/grass.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://m4dhpb4isoul" path="res://Scenes/treiner.tscn" id="4_jjvhh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kry3j"]
+size = Vector2(295.75, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjvhh"]
+size = Vector2(296.75, 20)
+
+[node name="Main" type="Node2D"]
+position = Vector2(106, 160)
+
+[node name="BackArea" type="Sprite2D" parent="."]
+position = Vector2(88, 26)
+scale = Vector2(3.005, 3.005)
+texture = ExtResource("1_kry3j")
+
+[node name="Area" type="Sprite2D" parent="."]
+position = Vector2(94, 40)
+scale = Vector2(2, 2)
+texture = ExtResource("1_jjvhh")
+
+[node name="Player" parent="." instance=ExtResource("2_8gbba")]
+z_index = 1
+position = Vector2(96, 35)
+
+[node name="Treiner" parent="." instance=ExtResource("4_jjvhh")]
+position = Vector2(174, 142)
+
+[node name="grasses" type="Node" parent="."]
+
+[node name="Grass" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(106, 160)
+
+[node name="Grass2" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(87, 160)
+
+[node name="Grass3" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(145, 141)
+
+[node name="Grass4" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(125, 142)
+
+[node name="Grass7" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(145, 159)
+
+[node name="Grass8" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(125, 160)
+
+[node name="Grass5" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(105, 142)
+
+[node name="Grass6" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(86, 142)
+
+[node name="Grass9" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(105, 125)
+
+[node name="Grass10" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(86, 125)
+
+[node name="Grass11" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(144, 106)
+
+[node name="Grass12" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(124, 107)
+
+[node name="Grass13" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(144, 124)
+
+[node name="Grass14" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(124, 125)
+
+[node name="Grass15" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(104, 107)
+
+[node name="Grass16" parent="grasses" instance=ExtResource("3_8gbba")]
+position = Vector2(85, 107)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(106.5, -91)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-8.625, -28)
+shape = SubResource("RectangleShape2D_kry3j")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-8.125, 288)
+shape = SubResource("RectangleShape2D_jjvhh")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-166.5, 131)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_jjvhh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(150.5, 128)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_jjvhh")

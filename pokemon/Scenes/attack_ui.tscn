@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct76l4ck1lin1"]
+
+[ext_resource type="Script" uid="uid://djvadn7alsms3" path="res://Scripts/attack_ui.gd" id="1_vyhbo"]
+
+[node name="Attack_ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_vyhbo")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 210.0
+offset_bottom = 109.0
+
+[node name="attack_box" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="attack_1" type="Button" parent="HBoxContainer/attack_box"]
+layout_mode = 2
+text = "attack rapido	"
+
+[node name="attack_2" type="Button" parent="HBoxContainer/attack_box"]
+layout_mode = 2
+text = "attack forte"
+
+[node name="buff_box" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="buff" type="Button" parent="HBoxContainer/buff_box"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "cura"
+
+[node name="back" type="Button" parent="HBoxContainer/buff_box"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "back
+"
+
+[connection signal="pressed" from="HBoxContainer/attack_box/attack_1" to="." method="_on_attack_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/attack_box/attack_2" to="." method="_on_attack_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/buff_box/buff" to="." method="_on_buff_pressed"]
+[connection signal="pressed" from="HBoxContainer/buff_box/back" to="." method="_on_back_pressed"]

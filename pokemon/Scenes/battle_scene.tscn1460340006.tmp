@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://c030x4e0ulben"]
+
+[ext_resource type="Script" uid="uid://dcidfuql5ocny" path="res://Scripts/battle_scene.gd" id="1_anwxn"]
+[ext_resource type="PackedScene" uid="uid://prw42y7licu0" path="res://Scenes/battle_controller.tscn" id="1_b25br"]
+[ext_resource type="PackedScene" uid="uid://bibasrw2pr3cr" path="res://Scenes/Wild_enemy.tscn" id="4_3gnqe"]
+[ext_resource type="Script" uid="uid://u4xr7hl3lmym" path="res://Scripts/turnManager.gd" id="4_e5vbs"]
+[ext_resource type="Script" uid="uid://cver7m8ob3bem" path="res://Scenes/enemy_manager.gd" id="5_3gnqe"]
+
+[node name="Battle_scene" type="Node2D"]
+script = ExtResource("1_anwxn")
+
+[node name="Enemy_bar" type="ProgressBar" parent="."]
+offset_left = 230.0
+offset_top = 7.5
+offset_right = 460.0
+offset_bottom = 34.5
+scale = Vector2(0.5, 0.5)
+
+[node name="Player_bar" type="ProgressBar" parent="."]
+anchors_preset = -1
+anchor_bottom = 0.097
+offset_left = 7.5
+offset_top = 97.5
+offset_right = 237.5
+offset_bottom = 124.5
+scale = Vector2(0.5, 0.5)
+
+[node name="Battle_ui" parent="." instance=ExtResource("1_b25br")]
+anchors_preset = 15
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TurnManager" type="Node" parent="."]
+script = ExtResource("4_e5vbs")
+
+[node name="Enemy_Manager" type="Node2D" parent="."]
+script = ExtResource("5_3gnqe")
+inimigo_um_cena = ExtResource("4_3gnqe")
