@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bibasrw2pr3cr"]
+[gd_scene load_steps=8 format=3 uid="uid://bibasrw2pr3cr"]
 
+[ext_resource type="Script" uid="uid://c7mm42py3fgem" path="res://Scripts/wild_enemy.gd" id="1_7kbop"]
 [ext_resource type="Texture2D" uid="uid://dftbx4s7pldny" path="res://Sprites/pokemon_stone_golen.png" id="1_lmqu6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_anwxn"]
@@ -39,6 +40,9 @@ animations = [{
 }]
 
 [node name="Wild_Enemy" type="Node2D"]
+script = ExtResource("1_7kbop")
+enemy_current_life = 100
+enemy_life = 100
 
 [node name="wild_enemy_sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_djcmg")

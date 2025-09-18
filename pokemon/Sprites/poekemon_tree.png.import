@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://68vq15qej1vf"
-path="res://.godot/imported/grass.png-11790cf4996b3e431ddcdfc0fd7a15ea.ctex"
+uid="uid://bn5h0b8dyi6lu"
+path="res://.godot/imported/poekemon_tree.png-0eba073d5dc5bef67d1fdc91d2268f00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/grass.png"
-dest_files=["res://.godot/imported/grass.png-11790cf4996b3e431ddcdfc0fd7a15ea.ctex"]
+source_file="res://Sprites/poekemon_tree.png"
+dest_files=["res://.godot/imported/poekemon_tree.png-0eba073d5dc5bef67d1fdc91d2268f00.ctex"]
 
 [params]
 
